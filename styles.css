@@ -1,0 +1,92 @@
+* {
+padding: 0;
+margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.hat {
+    flex: 1;
+    background-color: blue;
+}
+.main {
+    display: flex;
+    flex:5 ;
+    background-color: red;
+}
+@media screen and (max-width: 650px){
+  .main{
+    flex-direction: column-reverse;
+  }  
+}
+.players {
+    flex :1 0 150px;
+    background-color: aquamarine;
+}
+.words {
+    flex : 20;
+    background-color: yellowgreen;
+}
+.grid {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit,minmax(19%,auto));
+    /*space beetween rows*/
+
+
+/*margin: 10px;*/
+
+
+
+  /*  height: 80vh;*/
+   /*grid-column-gap: 10px;*/
+}
+@media (max-width:510px) {
+  .grid{
+    grid-template-columns: repeat(2,minmax(49%,auto));
+
+  }  
+}
+.grid-item {
+    display: flex;
+   min-width: 99%;
+   min-height: 99%;
+   align-self: center;
+   justify-self: center;
+   border: 1px solid black;
+   border-radius: calc(10%);
+   font-size: calc(10px + 3.5vw); 
+   
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+.g-item1 {
+    background-color: aqua;
+}
+.g-item2 {
+    background-color: red;
+}
+.g-item3 {
+    background-color: green;
+}
+.modal {
+position: none;/*fixed*/
+top: 0;
+right: 0;
+left:0;
+bottom:0;
+background-color: rgba(0, 0, 0, 0.2);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.dialog {
+width: 300px;
+min-height: 180px;
+background-color: blue;
+}
